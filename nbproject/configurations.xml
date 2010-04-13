@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="62">
+  <logicalFolder name="root" displayName="root" projectFiles="true">
+    <logicalFolder name="HeaderFiles"
+                   displayName="Header Files"
+                   projectFiles="true">
+      <itemPath>source/eibtrace.h</itemPath>
+      <itemPath>source/mylib.h</itemPath>
+      <itemPath>source/prepared.h</itemPath>
+      <itemPath>source/process_prepared_statement.h</itemPath>
+    </logicalFolder>
+    <logicalFolder name="ResourceFiles"
+                   displayName="Resource Files"
+                   projectFiles="true">
+    </logicalFolder>
+    <logicalFolder name="SourceFiles"
+                   displayName="Source Files"
+                   projectFiles="true">
+      <itemPath>source/EDC.cpp</itemPath>
+      <itemPath>source/eibtrace.cpp</itemPath>
+      <itemPath>source/mylib.cpp</itemPath>
+      <itemPath>source/prepared.cpp</itemPath>
+      <itemPath>source/process_prepared_statement.cpp</itemPath>
+    </logicalFolder>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="false">
+      <itemPath>Makefile</itemPath>
+    </logicalFolder>
+  </logicalFolder>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="Debug" type="1">
+      <toolsSet>
+        <developmentServer>localhost</developmentServer>
+        <compilerSet>GNU|GNU</compilerSet>
+        <platform>2</platform>
+      </toolsSet>
+      <compileType>
+        <ccTool>
+          <incDir>
+            <pElem>/usr/include/mysql++</pElem>
+            <pElem>/usr/include/mysql</pElem>
+            <pElem>/usr/local/include</pElem>
+          </incDir>
+        </ccTool>
+        <linkerTool>
+          <linkerAddLib>
+            <pElem>/usr/local/lib</pElem>
+            <pElem>/usr/lib/mysql</pElem>
+            <pElem>/usr/lib</pElem>
+          </linkerAddLib>
+          <linkerDynSerch>
+            <pElem>/usr/local/lib</pElem>
+          </linkerDynSerch>
+          <linkerLibItems>
+            <linkerLibLibItem>mysqlclient</linkerLibLibItem>
+            <linkerLibLibItem>pth</linkerLibLibItem>
+            <linkerLibLibItem>eibnetmux</linkerLibLibItem>
+            <linkerLibLibItem>m</linkerLibLibItem>
+            <linkerLibLibItem>zlogger</linkerLibLibItem>
+          </linkerLibItems>
+        </linkerTool>
+      </compileType>
+    </conf>
+    <conf name="Release" type="1">
+      <toolsSet>
+        <developmentServer>localhost</developmentServer>
+        <compilerSet>GNU|GNU</compilerSet>
+        <platform>2</platform>
+      </toolsSet>
+      <compileType>
+        <cTool>
+          <developmentMode>5</developmentMode>
+        </cTool>
+        <ccTool>
+          <developmentMode>5</developmentMode>
+          <incDir>
+            <pElem>/usr/include/mysql++</pElem>
+            <pElem>/usr/include/mysql</pElem>
+            <pElem>/usr/local/include/eibnetmux</pElem>
+            <pElem>/usr/local/include/polarssl</pElem>
+            <pElem>/usr/local/include/zlogger</pElem>
+          </incDir>
+        </ccTool>
+        <fortranCompilerTool>
+          <developmentMode>5</developmentMode>
+        </fortranCompilerTool>
+        <linkerTool>
+          <linkerAddLib>
+            <pElem>/usr/local/lib</pElem>
+            <pElem>/usr/lib/mysql</pElem>
+            <pElem>/usr/lib</pElem>
+          </linkerAddLib>
+          <linkerLibItems>
+            <linkerLibLibItem>eibnetmux</linkerLibLibItem>
+            <linkerLibLibItem>pth</linkerLibLibItem>
+            <linkerLibLibItem>zlogger</linkerLibLibItem>
+            <linkerLibLibItem>mysqld</linkerLibLibItem>
+          </linkerLibItems>
+        </linkerTool>
+      </compileType>
+    </conf>
+  </confs>
+</configurationDescriptor>
